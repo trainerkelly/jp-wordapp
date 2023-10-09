@@ -1,0 +1,186 @@
+[
+  {
+    "refcode": "gnk-amari-001",
+    "word": "あまり",
+    "reading-kana": "あまり",
+    "reading-romaji": "amari",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "not much",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-ano-002",
+    "word": "あの",
+    "reading-kana": "あの",
+    "reading-romaji": "ano",
+    "type": [
+      "expression"
+    ],
+    "meaning": "um",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-arigatou-001",
+    "word": "ありがとう",
+    "reading-kana": "ありがとう",
+    "reading-romaji": "arigatou",
+    "type": [
+      "expression"
+    ],
+    "meaning": "thank you",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-arigatou-gozaimasu-001",
+    "word": "ありがとうございます",
+    "reading-kana": "ありがとうございます",
+    "reading-romaji": "arigatougozaimasu",
+    "type": [
+      "expression"
+    ],
+    "meaning": "thank you very much",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-apaato-001",
+    "word": "アパート",
+    "reading-kana": "アパート",
+    "reading-romaji": "apaato",
+    "type": [
+      "noun"
+    ],
+    "meaning": "apartment",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-amusuterudamu-001",
+    "word": "アムステルダム",
+    "reading-kana": "アムステルダム",
+    "reading-romaji": "amusuterudamu",
+    "type": [
+      "noun"
+    ],
+    "meaning": "Amsterdam",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-amerika-001",
+    "word": "アメリカ",
+    "reading-kana": "アメリカ",
+    "reading-romaji": "amerika",
+    "type": [
+      "noun"
+    ],
+    "meaning": "America",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-aruzenchin-001",
+    "word": "アルゼンチン",
+    "reading-kana": "アルゼンチン",
+    "reading-romaji": "aruzenchin",
+    "type": [
+      "noun"
+    ],
+    "meaning": "Argentina",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-arubaito-001",
+    "word": "アルバイト",
+    "reading-kana": "アルバイト",
+    "reading-romaji": "arubaito",
+    "type": [
+      "noun"
+    ],
+    "meaning": "part-time job",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": "(usually for college students)"
+  },
+  {
+    "refcode": "gnk-aruhi-001",
+    "word": "ある日",
+    "reading-kana": "あるひ",
+    "reading-romaji": "aruhi",
+    "type": [
+      "noun"
+    ],
+    "meaning": "one day",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-ano-001",
+    "word": "あの",
+    "reading-kana": "あの",
+    "reading-romaji": "ano",
+    "type": [
+      "noun"
+    ],
+    "meaning": "that",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": "…(over there)"
+  },
+  {
+    "refcode": "gnk-anata-001",
+    "word": "あなた",
+    "reading-kana": "あなた",
+    "reading-romaji": "anata",
+    "type": [
+      "pronoun"
+    ],
+    "meaning": "you",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "gnk-aru-001",
+    "word": "ある",
+    "reading-kana": "ある",
+    "reading-romaji": "aru",
+    "type": [
+      "verb",
+      "godan verb"
+    ],
+    "meaning": "there is",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": "...（〜が）"
+  },
+  {
+    "refcode": "gnk-aru-002",
+    "word": "ある〜",
+    "reading-kana": "ある〜",
+    "reading-romaji": "aru~",
+    "type": [
+      "verb",
+      "godan verb"
+    ],
+    "meaning": "one...",
+    "alterative-readings": "",
+    "nuance": "",
+    "other-notes": ""
+  }
+]

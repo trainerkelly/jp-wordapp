@@ -1,0 +1,820 @@
+<!doctype html> 
+<html lang="en">
+    <head>
+        <title>TrainerKelly's Japanese Learning Session</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/ca9f16f33e.js" crossorigin="anonymous"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=Dela+Gothic+One&family=DotGothic16&family=Hachi+Maru+Pop&family=Kaisei+Opti:wght@400;700&family=Kaisei+Tokumin:wght@400;700&family=Kosugi+Maru&family=M+PLUS+1p:wght@400;700&family=M+PLUS+Rounded+1c:wght@400;700&family=Mochiy+Pop+One&family=New+Tegomin&family=Noto+Sans+JP:wght@200;400;700&family=Noto+Serif+JP:wght@400;700&family=Potta+One&family=Rampart+One&family=Reggae+One&family=RocknRoll+One&family=Sawarabi+Gothic&family=Shippori+Antique+B1&family=Shippori+Mincho+B1:wght@400;700&family=Yuji+Boku&family=Yuji+Mai&family=Yuji+Syuku&family=Yusei+Magic&family=Zen+Antique&family=Zen+Kurenaido&family=Zen+Old+Mincho:wght@400;700&display=swap" rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <header>
+        <h1>TrainerKelly's Japanese Learning Session</h1>
+        <nav class="section-nav">
+            <button id="home-btn" class="section-links" onclick="openSection(event, 'home-tab')">Home</button>
+            <button id="about-btn" class="section-links" onclick="openSection(event, 'about-tab')">About</button>
+            <button id="settings-btn" class="section-links" onclick="openSection(event, 'settings-tab')">Word List &amp; Settings</button>
+            <button id="word-selection-btn" class="section-links" onclick="openSection(event, 'word-selection-tab')">Word Selection</button>
+            <button id="learn-btn" class="section-links" onclick="openSection(event, 'learn-tab')">Learn</button>
+            <button id="credits-btn" class="section-links" onclick="openSection(event, 'credits-tab')">Credits</button>
+        </nav>
+
+        </header>
+
+        <main>
+        <aside id="no-js-message">
+            <p>Oh no! It seems that you have JavaScript disabled!</p>
+            <p>Please re-enable JavaScript or try again later.</p>
+        </aside>
+
+        <button id="home-btn" class="section-links mobile-nav" onclick="openSection(event, 'home-tab')">Home</button>
+        <section id="home-tab" class="section-content">
+            <h2>Home</h2>
+            <p>An app I made specifically to help me study Japanese vocabulary. I thought you might get some use out of it too.</p>
+            <p>Go to "Word List &amp; Settings" to pick your word list. Head to "Word Selection" to select the exact words you want to study.</p>
+            <p>Once you're done, go to "Learn" to start learning!</p>
+            <p class="message-line-warning">This site is not optimized for mobile at this time.</p>
+        </section>
+
+        <button id="about-btn" class="section-links mobile-nav" onclick="openSection(event, 'about-tab')">About</button>
+        <section id="about-tab" class="section-content">
+            <h2>About</h2>
+            <p>I had paused actively learning Japanese in July 2012.</p>
+            <p>I found myself suddenly getting back to it mid-January 2022 after I could <em>not</em> get enough of a manga I read. I decided not to wait for the next release in English. Instead, I read it in Japanese.</p>
+            <p>Reading one manga in Japanese lead to another and soon enough, I was making a custom word list of all the words I wasn't familiar with (which was a lot!). (Not just from manga either – applications I used and even a video game helped contribute to the list.)</p>
+            <p>I knew I wanted to study it the same sort of way I did with learning hiragana and katakana – the typing game of <a href="https://realkana.com/" target="_blank">RealKana</a>.</p>
+            <p>Problem was...a vocabulary version just didn't exist.</p>
+            <p>Especially not one that let me use my own word list.</p>
+            <p>So I built it.</p>
+
+            <h3>How to Use</h3>
+            <p>Designed typing gaming-style. Type in the answer and see if you're correct. It's very easy to get started:</p>
+            <ol>
+                <li>Go to "Word List &amp; Settings" and select your word list, set your settings, select desired font(s);</li>
+                <li>Go to "Word Selection" and select at least 5 words;</li>
+                <li>Go to "Learn" to start learning!</li>
+            </ol>
+
+            <h4>Reading V.S. Meaning</h4>
+            <p>You can choose whether you want to learn the reading of the word in Japanese or the meaning of the word in English or BOTH (it defaults to both).</p>
+
+            <p>You will see a label displayed to indicate if you are meant to type the meaning or the reading.</p>
+            <ul class="label-list">
+                <li><span class="english-label test-type">ENG</span> – indicates English meaning (when doing both)</li>
+                <li><span class="nihongo-label test-type">日本語</span> – indicates Japanese reading (when doing both)</li>
+                <li><span class="english-label test-type">意味だけ • Meanings ONLY</span> – indicates meaning in English ONLY</li>
+                <li><span class="nihongo-label test-type">読みだけ • Readings ONLY</span> – indicates reading in Japanese ONLY</li>
+            </ul>
+
+            <p>While you can only type in English letters for the English meanings, you can type in either romaji or kana for the readings!</p>
+
+            <p class="red-text">At this time, there a slight glitch with using kana to answer. The test will check your answer before you're actually done typing – but don't worry. Keep going! If you are correct, it will eventually let you move on.</p>
+
+            <h3>Supplement, Not Replacement</h3>
+            <p>This app isn't meant to replace your other learning methods – it's to act as a supplement or a compliment to them!</p>
+            <p>Some words inside of the list(s) may be considered rude or are non-standard words. Make sure to do some additional research before you use them!</p>
+            <p>Use with other resources for a full learning experience.</p>
+
+            <aside>
+                <h3>Noticed Issues?</h3>
+                <p>This is probably the first "complex" (is it even all that complex?) project I built. There's bound to be glitches I never noticed.</p>
+                <p>It's also completely possible I got a meaning or reading wrong, had a spelling mistake, or something else.</p>
+                <p><a href="mailto:hello@kellymulry.com">Email me</a> with issues (or just to say "hello"! I accept that too!)</p>
+
+                <h3>Support Me</h3>
+                <p>If you found this app useful and have a bit of money to spare, feel free to leave a tip.</p>
+                <ul>
+                    <li><a href="https://ko-fi.com/trainerkelly" target="_blank">Ko-Fi</a></li>
+                    <li><a href="https://www.buymeacoffee.com/trainerkelly" target="_blank">Buy Me a Coffee</a></li>
+                    <li><a href="https://www.paypal.com/paypalme/trainerkelly" target="_blank">PayPal Me</a></li>
+                </ul>
+
+                <p>Feel free to also check out <a href="https://github.com/trainerkelly" target="_blank">My GitHub Profile</a> and my <a href="http://www.kellymulry.com" target="_blank">Portfolio Site.</a></p>
+            </aside>
+
+            <p class="small"><span class="bold">App Version:</span> 1.0.0</p>
+        </section>
+
+        <button id="settings-btn" class="section-links mobile-nav" onclick="openSection(event, 'settings-tab')">Word List &amp; Settings</button>
+        <section id="settings-tab" class="section-content">
+            <h2>Word List &amp; Settings</h2>
+            <div id="settings-display">
+                    <div id="checkbox-settings">
+                        <div id="wordlist-selection">
+                            <form id="wordlist-options">
+                                <h3>Word List</h3>
+                                <!-- <p>Select the category you would like to learn.</p>
+                                <input type="radio" id="category-vocabulary" name="learning-cateogry" value="Vocabulary">
+                                <label for="category-vocabulary">Vocabulary</label> -->
+<!-- 
+                                <input type="radio" id="category-kanji-radicals" name="learning-cateogry" value="Kanji Radicals" data-url="kanji-radicals.json">
+                                <label for="category-kanji-radicals">Kanji Radicals</label> -->
+
+                                <p>Select a list to study.</p>
+                                
+                                <label for="tk-list-1" class="label"> 
+                                    <input type="radio" id="tk-list-1" name="wordlist" value="TrainerKelly's Custom List 1" data-url="tklist1-test.json">
+                                    <span class="radio"></span>
+                                    TrainerKelly's Custom List 1
+                                </label>
+
+                                
+                                <label for="genki" class="label">
+                                    <input type="radio" id="genki" name="wordlist" value="Genki" data-url="genki-test.json">
+                                    <span class="radio"></span>
+                                    Genki Textbook
+                                </label>
+                                <div id="wordlist-message">
+                                    <p class="message-line-warning">Please select a word list!</p>
+                                </div>
+                            </form>
+
+                            <h3>Learning Focus</h3>
+                            <p>Select what you would like to focus on.</p>
+                            <!-- Meaning & Reading, Just Readings, Just Meanings -->
+                            <form id="learning-focus-selection">
+                            
+                            <label for="learning-focus-both" class="label">
+                                <input type="radio" id="learning-focus-both" name="learningfocus" value="Readings and Meanings" checked>
+                                <span class="radio"></span>
+                                Readings &amp; Meanings
+                            </label> 
+                            <br>
+
+                            <label for="learning-focus-readings" class="label">
+                                <input type="radio" id="learning-focus-readings" name="learningfocus" value="Just Readings">
+                                <span class="radio"></span>
+                                Just Readings</label> <br>
+
+                            <label for="learning-focus-meanings" class="label">
+                                <input type="radio" id="learning-focus-meanings" name="learningfocus" value="Just Meanings">
+                                <span class="radio"></span>
+                                Just Meanings</label> <br>
+                            </form>
+
+                            <h3>Randomization</h3>
+                            <p>Randomize the words and the corresponding answers (if applicable).</p>
+                            <p>Does <span class="bold">not</span> jumble the words and the answers to come up at different times. The answers always correspond with the selected word.</p>
+                            <!-- Toggle Randomization: selecting a word, answers-->
+                            <form id="randomization-selection">
+                            
+                            <label for="randomization-words" id="randomization-words-label" class="label">
+                                <input type="checkbox" id="randomization-words" name="randomization" value="Randomize Words" checked>
+                                <span class="checkmark"></span>
+                                Randomize Words
+                            </label> <br>
+
+                            <label for="randomization-answers" id="randomization-answers-label" class="label show">
+                                <input type="checkbox" id="randomization-answers" name="randomization" value="Randomize Answers" class="show" checked>
+                                <span class="checkmark"></span>
+                                Randomize Answers
+                            </label> <br>
+                            </form>
+
+                                <h3>Choose a Font</h3>
+                                <p>Display words in the font of your choice.</p>
+                                <p>If more than 1 font is selected, the font will randomly change with each word selected.</p>
+                                <!-- Font Selection + Randomization -->
+                                <label for="fonts-selectall" class="label">
+                                    <input type="checkbox" id="fonts-selectall" name="fonts" value="Select All Words">
+                                    <span class="checkmark"></span>
+                                    Select All Fonts
+                                </label> <br> <br>
+
+                                <form id="font-selection">
+                                <div class="font-grid">
+                                  
+                                    <label for="fonts-noto-sans-jp" class="noto-sans-jp font-card label">
+                                        <input type="checkbox" id="fonts-noto-sans-jp" name="fonts" value="Noto Sans Japanese" data-font="noto-sans-jp" class="checkbox-styling" checked>
+                                        <span class="checkmark"></span>
+                                        Noto Sans Japanese <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-noto-serif-jp" class="noto-serif-jp font-card label">
+                                    <input type="checkbox" id="fonts-noto-serif-jp" name="fonts" value="Noto Serif Japanese" data-font="noto-serif-jp" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Noto Serif Japanese <br>
+                                        日本語フォント
+                                    </label>
+                                
+                                    <label for="fonts-m-plus-rounded-1c" class="m-plus-rounded-1c font-card label">
+                                    <input type="checkbox" id="fonts-m-plus-rounded-1c" name="fonts" value="M PLUS Rounded 1c" data-font="m-plus-rounded-1c" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        M PLUS Rounded 1c  <br>
+                                        日本語フォント
+                                    </label>
+    
+
+                                    <label for="fonts-m-plus-1p" class="m-plus-1p font-card label">
+                                    <input type="checkbox" id="fonts-m-plus-1p" name="fonts" value="M Plus 1p" data-font="m-plus-1p" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        M PLUS 1p  <br>
+                                        日本語フォント
+                                    </label> 
+    
+                                    <label for="fonts-yuki-mai" class="yuki-mai font-card label">
+                                    <input type="checkbox" id="fonts-yuki-mai" name="fonts" value="Yuki Mai" data-font="yuki-mai" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Yuki Mai  <br> 
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-sawarabi-gothic" class="sawarabi-gothic font-card label">
+                                    <input type="checkbox" id="fonts-sawarabi-gothic" name="fonts" value="Sawarabi Gothic" data-font="sawarabi-gothic" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Sawarabi Gothic <br>
+                                        日本語フォント
+                                    </label> 
+
+                                    <label for="fonts-kosugi-maru" class="kosugi-maru font-card label">
+                                    <input type="checkbox" id="fonts-kosugi-maru" name="fonts" value="Kosugi Maru" data-font="kosugi-maru" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Kosugi Maru <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-zen-antique" class="zen-antique font-card label">
+                                    <input type="checkbox" id="fonts-zen-antique" name="fonts" value="Zen Antique" data-font="zen-antique" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Zen Antique  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-zen-old-mincho" class="zen-old-mincho font-card label">
+                                    <input type="checkbox" id="fonts-zen-old-mincho" name="fonts" value="Zen Old Mincho" data-font="zen-old-mincho" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Zen Old Mincho  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-shippori-mincho-b1" class="shippori-mincho-b1 font-card label">
+                                    <input type="checkbox" id="fonts-shippori-mincho-b1" name="fonts" value="Shippori Mincho B1" data-font="shippori-mincho-b1" class="checkbox-styling" >
+                                        <span class="checkmark"></span>
+                                        Shippori Mincho B1  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-zen-kurenaido" class="zen-kurenaido font-card label">
+                                    <input type="checkbox" id="fonts-zen-kurenaido" name="fonts" value="Zen Kurenaido" data-font="zen-kurenaido" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Zen Kurenaido  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-delta-gothic-one" class="delta-gothic-one font-card label">
+                                    <input type="checkbox" id="fonts-delta-gothic-one" name="fonts" value="Delta Gothic One" data-font="delta-gothic-one" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Delta Gothic One <br> 
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-rocknroll-one" class="rocknroll-one font-card label">
+                                    <input type="checkbox" id="fonts-rocknroll-one" name="fonts" value="RocknRoll One" data-font="rocknroll-one" class="delta-gothic-one">
+                                        <span class="checkmark"></span>
+                                        RocknRoll One <br> 
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-dot-gothic-16" class="dot-gothic-16 font-card label">
+                                    <input type="checkbox" id="fonts-dot-gothic-16" name="fonts" value="DotGothic16" data-font="dot-gothic-16" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        DotGothic16  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-yusei-magic" class="yusei-magic font-card label">
+                                    <input type="checkbox" id="fonts-yusei-magic" name="fonts" value="Yusei Magic" data-font="yusei-magic" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Yusei Magic  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-new-tegomin" class="new-tegomin font-card label">
+                                    <input type="checkbox" id="fonts-new-tegomin" name="fonts" value="New Tegomin" data-font="new-tegomin" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        New Tegomin  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-rampart-one" class="rampart-one font-card label">
+                                    <input type="checkbox" id="fonts-rampart-one" name="fonts" value="Rampart One" data-font="rampart-one" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Rampart One  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-reggae-one" class="reggae-one font-card label">
+                                    <input type="checkbox" id="fonts-reggae-one" name="fonts" value="Reggae One" data-font="reggae-one" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Reggae One  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-mochiy-pop-one" class="mochiy-pop-one font-card label">
+                                    <input type="checkbox" id="fonts-mochiy-pop-one" name="fonts" value="Mochiy Pop One" data-font="mochiy-pop-one" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Mochiy Pop One  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-kaisei-tokumin" class="kaisei-tokumin font-card label">
+                                    <input type="checkbox" id="fonts-kaisei-tokumin" name="fonts" value="Kaisei Tokumin" data-font="kaisei-tokumin" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Kaisei Tokumin  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-biz-udpmincho" class="biz-udpmincho font-card label">
+                                    <input type="checkbox" id="fonts-biz-udpmincho" name="fonts" value="BIZ UDPMincho" data-font="biz-udpmincho" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        BIZ UDPMincho  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-potta-one" class="potta-one font-card label">
+                                    <input type="checkbox" id="fonts-potta-one" name="fonts" value="Potta One" data-font="potta-one" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Potta One  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-kaisei-opti" class="kaisei-opti font-card label">
+                                    <input type="checkbox" id="fonts-kaisei-opti" name="fonts" value="Kaisei Opti" data-font="kaisei-opti" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Kaisei Opti  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-hachi-maru-pop"  class="hachi-maru-pop font-card label">
+                                    <input type="checkbox" id="fonts-hachi-maru-pop" name="fonts" value="Hachi Maru Pop" data-font="hachi-maru-pop" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Hachi Maru Pop  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-yuji-syuku" class="yuji-syuku font-card label">
+                                    <input type="checkbox" id="fonts-yuji-syuku" name="fonts" value="Yuji Syuku" data-font="yuji-syuku" class="checkbox-styling">
+                                        <span class="checkmark"></span>
+                                        Yuji Syuku  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-shippori-antique-b1" class="shippori-antique-b1 font-card label">
+                                    <input type="checkbox" id="fonts-shippori-antique-b1" name="fonts" value="Shippori Antique B1" data-font="shippori-antique-b1" class="checkbox-styling">
+                                    <span class="checkmark"></span>
+                                        Shippori Antique B1  <br>
+                                        日本語フォント
+                                    </label>
+
+                                    <label for="fonts-yuji-boku" class="yuji-boku font-card label">
+                                    <input type="checkbox" id="fonts-yuji-boku" name="fonts" value="Yuji Boku" data-font="yuji-boku" class="checkbox-styling">
+                                    <span class="checkmark"></span>
+                                        Yuji Boku  <br>
+                                        日本語フォント
+                                    </label>
+                                </div>
+                                </form> <br>
+                                <input type="reset" value="Clear All Settings" id="settings-reset" class="button">
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <button id="word-selection-btn" class="section-links mobile-nav" onclick="openSection(event, 'word-selection-tab')">Word Selection</button>
+        <section id="word-selection-tab" class="section-content">
+            <h2>Word Selection</h2>
+            <p id="five-words-message" class="message-line-warning">Please select at least 5 words to start learning.</p>
+            <p id="number-of-words-selected-message">Words Selected: <span id="number-of-selected-words">0</span></p>
+            <div id="word-selection-wrapper">
+            <aside id="word-selection-controls" class="scroll">
+                <h3>Filter by Type</h3>
+                <form id="filter-selection">
+                    <label for="filter-all" class="label">
+                    <input type="radio" id="filter-all" name="filterbywordtype" value="filter all">
+                    <span class="radio"></span>
+                    Filter All</label> <br>
+
+                    <label for="filter-nouns" class="label">
+                    <input type="radio" id="filter-nouns" name="filterbywordtype" value="noun">
+                    <span class="radio"></span>
+                    Nouns</label> <br>
+
+                    <label for="filter-pronouns" class="label">
+                    <input type="radio" id="filter-pronouns" name="filterbywordtype" value="pronoun">
+                    <span class="radio"></span>
+                    Pronouns</label> <br>
+
+                    <label for="filter-verbs" class="label">
+                    <input type="radio" id="filter-verbs" name="filterbywordtype" value="verb">
+                    <span class="radio"></span>
+                    Verbs</label> <br>
+
+                    <label for="filter-ichidan-verbs" class="label">
+                    <input type="radio" id="filter-ichidan-verbs" name="filterbywordtype" value="ichidan verb">
+                    <span class="radio"></span>
+                    Ichidan Verbs</label> <br>
+
+                    <label for="filter-godan-verbs" class="label">
+                    <input type="radio" id="filter-godan-verbs" name="filterbywordtype" value="godan verb">
+                    <span class="radio"></span>
+                    Godan Verbs</label> <br>
+
+                    <label for="filter-suru-verbs" class="label">
+                    <input type="radio" id="filter-suru-verbs" name="filterbywordtype" value="suru verb">
+                    <span class="radio"></span>
+                    する Verbs</label> <br>
+
+                    <label for="filter-transitive-verbs" class="label">
+                    <input type="radio" id="filter-transitive-verbs" name="filterbywordtype" value="transitive">
+                    <span class="radio"></span>
+                    Transitive Verbs</label> <br>
+
+                    <label for="filter-intransitive-verbs" class="label">
+                    <span class="radio"></span>
+                    <input type="radio" id="filter-intransitive-verbs" name="filterbywordtype" value="intransitive">
+                    Intransitive Verbs</label> <br>
+
+                    <label for="filter-auxiliary-verbs" class="label">
+                    <span class="radio"></span>
+                    <input type="radio" id="filter-auxiliary-verbs" name="filterbywordtype" value="auxiliary verb">
+                    Auxiliary Verbs</label> <br>
+
+                    <label for="filter-adjectives" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-adjectives" name="filterbywordtype" value="adjective">
+                    Adjectives</label> <br>
+                    
+                    <label for="filter-i-adjectives" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-i-adjectives" name="filterbywordtype" value="i-adjective">
+                    い-adjectives</label> <br>
+
+                    <label for="filter-na-adjectives" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-na-adjectives" name="filterbywordtype" value="na-adjective">
+                    な-adjectives</label> <br>
+
+                    <label for="filter-auxiliary-adjectives" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-auxiliary-adjectives" name="filterbywordtype" value="auxiliary adjective">
+                    Auxiliary Adjectives</label> <br>
+
+                    <label for="filter-adverbs" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-adverbs" name="filterbywordtype" value="adverb">
+                    Adverbs</label> <br>
+
+                    <label for="filter-conjunctions" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-conjunctions" name="filterbywordtype" value="conjunction">
+                    Conjunctions</label> <br>
+
+                    <label for="filter-expressions" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-expressions" name="filterbywordtype" value="expression">
+                    Expressions</label> <br>
+                    
+                    <label for="filter-interjections" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-interjections" name="filterbywordtype" value="interjection">
+                    Interjection</label> <br>
+
+                    <label for="filter-copulas" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-copulas" name="filterbywordtype" value="copula">
+                    Copulas</label> <br>
+
+                    <label for="filter-particles" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-particles" name="filterbywordtype" value="particle">
+                    Particles</label> <br>
+
+                    <label for="filter-counters" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-counters" name="filterbywordtype" value="counter">
+                    Counters</label> <br>
+
+                    <label for="filter-prefixes" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-prefixes" name="filterbywordtype" value="prefix">
+                    Prefixes</label> <br>
+
+                    <label for="filter-suffixes" class="label">
+                        <span class="radio"></span>
+                    <input type="radio" id="filter-suffixes" name="filterbywordtype" value="suffix">
+                    Suffixes</label> <br>
+                </form>
+
+                <!-- <div id="filter-by-kana">
+                    <h3>Filter by かな</h3>
+                    <button id="filter-a-btn" class="kana-btn">あ</button> 
+                    <button id="filter-ka-btn" class="kana-btn">か</button> 
+                    <button id="filter-sa-btn" class="kana-btn">さ</button> 
+                    <button id="filter-ta-btn" class="kana-btn">た</button>
+                    <button id="filter-na-btn" class="kana-btn">な</button> 
+                    <button id="filter-ha-btn" class="kana-btn">は</button> 
+                    <button id="filter-ma-btn" class="kana-btn">ま</button> 
+                    <button id="filter-ya-btn" class="kana-btn">や</button> 
+                    <button id="filter-ra-btn" class="kana-btn">ら</button> 
+                    <button id="filter-wa-btn" class="kana-btn">わ</button> 
+                    <button id="filter-n-btn" class="kana-btn">ん</button>
+                </div> -->
+
+                    <h3>Select by Type</h3>
+                    <div id="type-message"></div>
+                    <form id="type-selection">
+                        <label for="select-all" class="label">
+                        <input type="checkbox" id="select-all" name="selectbywordtype" value="Select All">
+                        <span class="checkmark"></span>
+                        Select All</label> <br>
+
+                        <label for="select-nouns" class="label">
+                        <input type="checkbox" id="select-nouns" name="selectbywordtype" value="noun">
+                        <span class="checkmark"></span>
+                        Nouns</label> <br>
+
+                        <label for="select-pronouns" class="label">
+                        <input type="checkbox" id="select-pronouns" name="selectbywordtype" value="pronoun">
+                        <span class="checkmark"></span>
+                        Pronouns</label> <br>
+
+                        <label for="select-verbs" class="label">
+                        <input type="checkbox" id="select-verbs" name="selectbywordtype" value="verb">
+                        <span class="checkmark"></span>
+                        Verbs</label> <br>
+
+                        <label for="select-ichidan-verbs" class="label">
+                        <input type="checkbox" id="select-ichidan-verbs" name="selectbywordtype" value="ichidan verb">
+                        <span class="checkmark"></span>
+                        Ichidan Verbs</label> <br>
+
+                        <label for="select-godan-verbs" class="label">
+                        <input type="checkbox" id="select-godan-verbs" name="selectbywordtype" value="godan verb">
+                        <span class="checkmark"></span>
+                       Godan Verbs</label> <br>
+
+                       <label for="select-suru-verbs" class="label">
+                        <input type="checkbox" id="select-suru-verbs" name="selectbywordtype" value="suru verb">
+                        <span class="checkmark"></span>
+                        する Verbs</label> <br>
+
+                        <label for="select-transitive-verbs" class="label">
+                        <input type="checkbox" id="select-transitive-verbs" name="selectbywordtype" value="transitive">
+                        <span class="checkmark"></span>
+                        Transitive Verbs</label> <br>
+
+                        <label for="select-intransitive-verbs" class="label">
+                        <input type="checkbox" id="select-intransitive-verbs" name="selectbywordtype" value="intransitive">
+                        <span class="checkmark"></span>
+                        Intransitive Verbs</label> <br>
+
+                        <label for="select-auxiliary-verbs" class="label">
+                        <input type="checkbox" id="select-auxiliary-verbs" name="selectbywordtype" value="auxiliary verb">
+                        <span class="checkmark"></span>
+                        Auxiliary Verbs</label> <br>
+
+                        <label for="select-adjectives" class="label">
+                        <input type="checkbox" id="select-adjectives" name="selectbywordtype" value="adjective">
+                        <span class="checkmark"></span>
+                        Adjectives</label> <br>
+
+                        <label for="select-i-adjectives" class="label">
+                        <input type="checkbox" id="select-i-adjectives" name="selectbywordtype" value="i-adjective">
+                        <span class="checkmark"></span>
+                        い-adjectives</label> <br>
+
+                        <label for="select-na-adjectives" class="label">
+                        <input type="checkbox" id="select-na-adjectives" name="selectbywordtype" value="na-adjective">
+                        <span class="checkmark"></span>
+                        な-adjectives</label> <br>
+
+                        <label for="select-auxiliary-adjectives" class="label">
+                        <input type="checkbox" id="select-auxiliary-adjectives" name="selectbywordtype" value="auxiliary adjective">
+                        <span class="checkmark"></span>
+                        Auxiliary Adjectives</label> <br>
+
+                        <label for="select-adverbs" class="label">
+                        <input type="checkbox" id="select-adverbs" name="selectbywordtype" value="adverb">
+                        <span class="checkmark"></span>
+                        Adverbs</label> <br>
+
+                        <label for="select-conjunctions" class="label">
+                        <input type="checkbox" id="select-conjunctions" name="selectbywordtype" value="conjunction">
+                        <span class="checkmark"></span>
+                        Conjunctions</label> <br>
+
+                        <label for="select-expressions" class="label">
+                        <input type="checkbox" id="select-expressions" name="selectbywordtype" value="expression">
+                        <span class="checkmark"></span>
+                        Expressions</label> <br>
+
+                        <label for="select-interjections" class="label">
+                        <input type="checkbox" id="select-interjections" name="selectbywordtype" value="interjection">
+                        <span class="checkmark"></span>
+                        Interjection</label> <br>
+
+                        <label for="select-copulas" class="label">
+                        <input type="checkbox" id="select-copulas" name="selectbywordtype" value="copula">
+                        <span class="checkmark"></span>
+                        Copulas</label> <br>
+
+                        <label for="select-particles" class="label">
+                        <input type="checkbox" id="select-particles" name="selectbywordtype" value="particle">
+                        <span class="checkmark"></span>
+                        Particles</label> <br>
+
+                        <label for="select-counters" class="label">
+                        <input type="checkbox" id="select-counters" name="selectbywordtype" value="counter">
+                        <span class="checkmark"></span>
+                        Counters</label> <br>
+
+                        <label for="select-prefixes" class="label">
+                        <input type="checkbox" id="select-prefixes" name="selectbywordtype" value="prefix">
+                        <span class="checkmark"></span>
+                        Prefixes</label> <br>
+
+                        <label for="select-suffixes" class="label">
+                        <input type="checkbox" id="select-suffixes" name="selectbywordtype" value="suffix">
+                        <span class="checkmark"></span>
+                        Suffixes</label> <br>
+                    </form>
+
+                    <!-- <div id="select-by-kana">
+                        <h3>Select by かな</h3>
+                        <button id="select-a-btn" class="kana-btn">あ</button> 
+                        <button id="select-ka-btn" class="kana-btn">か</button> 
+                        <button id="select-sa-btn" class="kana-btn">さ</button> 
+                        <button id="select-ta-btn" class="kana-btn">た</button>
+                        <button id="select-na-btn" class="kana-btn">な</button> 
+                        <button id="select-ha-btn" class="kana-btn">は</button> 
+                        <button id="select-ma-btn" class="kana-btn">ま</button> 
+                        <button id="select-ya-btn" class="kana-btn">や</button> 
+                        <button id="select-ra-btn" class="kana-btn">ら</button> 
+                        <button id="select-wa-btn" class="kana-btn">わ</button> 
+                        <button id="select-n-btn" class="kana-btn">ん</button>
+                    </div> --> 
+
+                    <br>
+
+                    <input type="reset" value="Clear All" id="wordselection-reset" class="button">
+                </aside>
+                <div id="word-selection-grid" class="scroll">
+                    <form id="word-selection">
+                        <p class="message-line-warning">There are no words to select! Please select a word list.</p>
+                    </form>
+                </div>
+                    </div>
+        </section>
+
+        <button id="learn-btn" class="section-links mobile-nav" onclick="openSection(event, 'learn-tab')">Learn</button>
+        <section id="learn-tab" class="section-content">
+            <h2>Learn</h2>
+            <p>Type the answer into the textbox below.</p>
+            <p>Look at the label to know if you need to type the Japanese reading (kana or romaji) or English meaning. If the word is already in kana, answer it with the same kana, otherwise use romaji.</p>
+            <p>Answers automatically validate. (Otherwise, press enter!)</p>
+            <p class="message-line-warning">There is currently a validation glitch when using kana (checks your answer before you finish typing). Continue answering – it will validate correctly if you are, in fact, correct!</p>
+            <p id="select-five-message" class="message-line-warning"></p>
+            <div id="typing-quiz">
+                <label for="extra-info" class="label">
+                <input type="checkbox" id="extra-info" name="extra-info" value="Extra Info">
+                    <span class="checkmark"></span>
+                    Extra Info
+                </label>
+
+                <div class="quiz-card">
+                <div id="typing-test-area">
+                <!-- Test Type = indicates if you need to type the romaji OR the English meaning -->
+                <p id="test-type" class=""></p> 
+
+                <!-- Vocab Word = displays vocabulary word -->
+                <p id="vocab-word"></p>
+
+        
+            <form class="">
+                <!-- Vocab Word Answer Incorrect = displays correct answer if answered incorrectly -->
+                <p id="answer-feedback"></p>
+                <!-- Answer Input -->
+                <label for="answer" class="clipping">Answer:</label>
+                <input type="text" id="answer" name="answer" placeholder="Type Answer Here..." autocomplete="off"><br>
+                <button id="check" class="button clipping">Check</button>
+            </form>
+            <p id="answer-hover" class="font-light"></p>
+            <div id="information"></div>
+            </div>
+
+
+
+        </div>
+
+        </div>
+                <!-- Information = some really brief info that would be helpful to someone at a glance, like it being a noun, verb with a certain ending, etc.-->
+                
+
+                <!-- Context = provides context for words in hiragana & katakana so the correct English meanings can be inferred -->
+                <div id="context"></div>
+        </section>
+
+        <button id="credits-btn" class="section-links mobile-nav" onclick="openSection(event, 'credits-tab')">Credits</button>
+        <section id="credits-tab" class="section-content">
+            <h2>Credits</h2>
+            <h3>Concept</h3>
+            <p><a href="https://realkana.com/" target="_blank">RealKana</a> by <a href="https://hoologic.io/" target="_blank">Hoo Logic</a>
+            <p>I may have eventually landed on this concept myself, but Hoo Logic's RealKana was like a shortcut to understanding one of the most effective ways for me to learn. It has stuck with me for years.</p> 
+
+            <p>It wasn't just the typing that made RealKana so effective for me – it was the instant feedback. If I got the word right, it moved on. If I got it wrong, it would stay and would <em>not</em> move until I answered correctly. I made sure to include such a feature in my own app.</p>
+
+            <p>Thank you, Hoo Logic, for your incredible RealKana. Even over a decade since I used your site, I can still read kana (hiragana and katakana) with ease. I hope that my own app can serve a similar purpose to all who use it.</p>
+
+            <h3>Tools</h3>
+            <h4>Japanese</h4>
+            <p><a href="https://www.yomiwa.net/" target="_blank">Yomiwa</a> – initial word list creation, dictionary</p>
+            <p><a href="https://jisho.org/" target="_blank">Jisho</a> – dictionary</p>
+
+            <h4>Data Compiling</h4>
+            <p><a href="https://www.apple.com/iphone/" target="_blank">iPhone</a> – for using Yomiwa</p>
+            <p><a href="https://www.icloud.com/notes" target="_blank">Notes</a> – compiling multiple word lists together</p>
+            <p><a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a> – spreadsheet creation, CSV creation</p>
+            <p><a href="https://csvjson.com/" target="_blank">Flatfile: csvjson</a> – converting CSV into JSON (a format containing a collection of data – in this case, the actual word list)</p>
+
+            <h4>Web Development</h4>
+            <p><span class="bold">Languages Used:</span> HTML, CSS, JavaScript</p>
+            <p><a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a> – for coding and programming</p>
+            <p><a href="https://www.mozilla.org/en-US/firefox/new/" target="_blank">FireFox</a> – testing, developer tools</p>
+            <p><a href="https://www.google.com/chrome/" target="_blank">Chrome</a> – testing, developer tools</p>
+            <p><a href="https://www.mamp.info/en/" target="_blank">MAMP</a> – testing server</p>
+            <p><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live Server (VS Code Extension)</a> – testing server</p>
+            <p><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> – tabs, adding/removing class names, custom checkboxes and radio buttons</p>
+            <p><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> – answers to my questions &amp; inspiration to my solutions</p>
+            <p><a href="https://www.google.com/" target="_blank">Google</a> – searching for answers, fonts, creating spreadsheets</p>
+            <p><a href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp</a> – learning JavaScript</p>
+            <p><a href="https://scrimba.com" target="_blank">Scrimba</a> – learning JavaScript</p>
+            <p><a href="https://teamtreehouse.com/" target="_blank">Treehouse</a> – learning JavaScript</p>
+
+
+            <h3>Word Sources</h3>
+            <ul>
+                <li>Various manga</li>
+                <li>Various novels</li>
+                <li>Various other books</li>
+                <li>My phone</li>
+                <li>Social Media sites set in Japanese</li>
+                <li>My friends</li>
+                <li>Clip Studio Paint Help Documents (Japanese) – <a href="https://help.clip-studio.com/ja-jp/First_Topic.htm" target="_blank">[View Guide]</a></li>
+                <li>Pokémon Shining Pearl (Japanese)</li>
+                <li>Genki (Textbook; 1st Edition) – <a href="https://genki3.japantimes.co.jp/en" target="_blank">[View Official Site]</a></li>
+                <li>日本語単語スピードマスター (Basic, Standard, Intermediate, Advanced) - <a href="https://www.jresearch.co.jp/search/?search_menu=keyword&tab=3&search_word=%E6%97%A5%E6%9C%AC%E8%AA%9E%E5%8D%98%E8%AA%9E%E3%82%B9%E3%83%94%E3%83%BC%E3%83%89%E3%83%9E%E3%82%B9%E3%82%BF%E3%83%BC+%E8%8B%B1%E8%AA%9E" target="_blank">[View on Official Site]</a></li>
+                <li>にほんごチャレンジ N4 series – <a href="https://www.ask-books.com/jp/978-4-87217-757-2/" target="_blank">[View on Official Site]</a></li>
+            </ul>
+
+            <h3>Github</h3>
+            <p>You can view this project on <a href="" target="_blank">on GitHub</a>. <span class="warning">Full JSON files NOT included. Only the short versions.</span></p>
+
+            <h3>Links of Interest</h3>
+            <p>None of these links are affiliate links. I'm just linking because I like these sites!</p>
+            <h4>Digital Books in Japanese</h4>
+            <p>Books in Japanese available for purchase. Includes manga and novels.</p>
+            <ul>
+                <li><a href="https://renta.papy.co.jp/" target="_blank">Renta!</a></li>
+                <li><a href="https://booklive.jp/" target="_blank">BookLive</a></li>
+                <li><a href="https://bookwalker.jp/" target="_blank">Bookwalker</a></li>
+            </ul>
+
+            <h4>J-Drama</h4>
+            <p>Watch TV shows in Japanese (including Japanese subtitles).</p>
+            <ul>
+                <li><a href="https://www.viki.com/categories/country/japan/genre/all" target="_blank">Rakuten Viki</a></li>
+            </ul>
+
+            <h4>Package Forwarding &amp; Proxy Services</h4>
+            <p>For ordering and forwarding items from Japan to you.</p>
+            <ul>
+                <li><a href="https://www.tenso.com/en" target="_blank">Tenso</a></li>
+            </ul>
+
+            <h4>Virtual Cards</h4>
+            <p>Virtual cards to protect your card info.</p>
+            <ul>
+                <li><a href="https://privacy.com/" target="_blank">Privacy</a></li>
+            </ul>
+
+            <h4>Gift Cards</h4>
+            <p>Gift cards to Japanese services such as iTunes Japan.</p>
+            <ul>
+                <li><a href="https://japancodesupply.com/" target="_blank">Japan Code Supply</a></li>
+            </ul>
+        
+        </section>
+    </main>
+        <footer>
+            <p>Site created by <a href="https://www.kellymulry.com" target="_blank">Kelly Mulry</a>. For personal use.</p>
+        </footer>
+        <script src="script.js"></script>
+        <script src="https://website-widgets.pages.dev/dist/sienna.min.js" defer></script>
+    </body>
+</html>

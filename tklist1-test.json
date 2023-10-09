@@ -1,0 +1,367 @@
+[
+  {
+    "refcode": "ymw-ryoushin-001",
+    "word": "両親",
+    "reading-kana": "りょうしん",
+    "reading-romaji": "ryoushin",
+    "type": [
+      "noun"
+    ],
+    "meaning": "both parents",
+    "alternate-readings": "(both) parents",
+    "nuance-notes": "",
+    "other-notes": ""
+  },
+  {
+    "refcode": "ymw-saiaku-001",
+    "word": "最悪",
+    "reading-kana": "さいあく",
+    "reading-romaji": "saiaku",
+    "type": [
+      "adjective",
+      "na-adjective",
+      "noun"
+    ],
+    "meaning": "worst",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "May use の to turn into an adjective"
+  },
+  {
+    "refcode": "ymw-fuhoni-001",
+    "word": "不本意",
+    "reading-kana": "ふほんい",
+    "reading-romaji": "fuhoni",
+    "type": [
+      "noun",
+      "adjective",
+      "na-adjective"
+    ],
+    "meaning": "unintentional",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-kondo-001",
+    "word": "今度",
+    "reading-kana": "こんど",
+    "reading-romaji": "kondo",
+    "type": [
+      "noun",
+      "adverb"
+    ],
+    "meaning": "this time",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-imasugu-001",
+    "word": "今すぐ",
+    "reading-kana": "いますぐ",
+    "reading-romaji": "imasugu",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "right away",
+    "alternate-readings": "right away",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-subeki-001",
+    "word": "す可き",
+    "reading-kana": "すべき",
+    "reading-romaji": "subeki",
+    "type": [
+      "expression"
+    ],
+    "meaning": "should do",
+    "alternate-readings": "should do",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-onajiyou-001",
+    "word": "同じよう",
+    "reading-kana": "おなじよう",
+    "reading-romaji": "onajiyou",
+    "type": [
+      "adjective",
+      "na-adjective",
+      "noun"
+    ],
+    "meaning": "similar",
+    "alternate-readings": "similar",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-ryouomoi-001",
+    "word": "両想い",
+    "reading-kana": "りょうおもい",
+    "reading-romaji": "ryouomoi",
+    "type": [
+      "noun"
+    ],
+    "meaning": "mutual love",
+    "alternate-readings": "両思い",
+    "nuance-notes": "N/A",
+    "other-notes": "I see 両想い literally all the time. I don't think I've seen 両思い once besides from the word lists??? Is there a nuanced difference between the two?"
+  },
+  {
+    "refcode": "ymw-deai-001",
+    "word": "出会い",
+    "reading-kana": "であい",
+    "reading-romaji": "deai",
+    "type": [
+      "noun"
+    ],
+    "meaning": "meeting",
+    "alternate-readings": "出遭い、出合、出会、出逢い",
+    "nuance-notes": "(?) informal, chance, or casual encounter",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-jyoutai-001",
+    "word": "状態",
+    "reading-kana": "じょうたい",
+    "reading-romaji": "jyoutai",
+    "type": [
+      "noun"
+    ],
+    "meaning": "state",
+    "alternate-readings": "情態",
+    "nuance-notes": "POSSIBLE NUANCE: it’s kind of like counters in Japanese or using つもり to state intentions – it’s just there to add that “flavor” to what comes before it.",
+    "other-notes": "EXAMPLE: セフレ情態 = (state as) sex friend\nEXAMPLE: = 喧嘩（けんか）情態 = (state of) fighting with [someone]"
+  },
+  {
+    "refcode": "ymw-heru-001",
+    "word": "経る",
+    "reading-kana": "へる",
+    "reading-romaji": "heru",
+    "type": [
+      "verb",
+      "ichidan verb"
+    ],
+    "meaning": "to experience",
+    "alternate-readings": "歴る",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-anzen-001",
+    "word": "安全",
+    "reading-kana": "あんぜん",
+    "reading-romaji": "anzen",
+    "type": [
+      "adjective",
+      "na-adjective",
+      "noun"
+    ],
+    "meaning": "safety",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "あんせん"
+  },
+  {
+    "refcode": "ymw-erasou-001",
+    "word": "偉そう",
+    "reading-kana": "えらそう",
+    "reading-romaji": "erasou",
+    "type": [
+      "adjective",
+      "na-adjective",
+      "noun"
+    ],
+    "meaning": "self-important",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-oboro-001",
+    "word": "朧",
+    "reading-kana": "おぼろ",
+    "reading-romaji": "oboro",
+    "type": [
+      "adjective",
+      "na-adjective",
+      "noun"
+    ],
+    "meaning": "vague",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-suteki-001",
+    "word": "素敵",
+    "reading-kana": "すてき",
+    "reading-romaji": "suteki",
+    "type": [
+      "adjective",
+      "na-adjective"
+    ],
+    "meaning": "wonderful",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "ステキ"
+  },
+  {
+    "refcode": "ymw-ano-001",
+    "word": "あの",
+    "reading-kana": "あの",
+    "reading-romaji": "ano",
+    "type": [
+      "adjective"
+    ],
+    "meaning": "that",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-betsubetsuni-001",
+    "word": "別々に",
+    "reading-kana": "べつべつに",
+    "reading-romaji": "betsubetsuni",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "separately",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-issonokoto-001",
+    "word": "いっその事",
+    "reading-kana": "いっそのこと",
+    "reading-romaji": "issonokoto",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "rather",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "いっそうのこと"
+  },
+  {
+    "refcode": "ymw-mushiro-001",
+    "word": "寧ろ",
+    "reading-kana": "むしろ",
+    "reading-romaji": "mushiro",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "instead",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-nandaka-001",
+    "word": "何だか",
+    "reading-kana": "なんだか",
+    "reading-romaji": "nandaka",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "somehow",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-nantomo-001",
+    "word": "何とも",
+    "reading-kana": "なんとも",
+    "reading-romaji": "nantomo",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "extremely",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "can also be used as an intensifier"
+  },
+  {
+    "refcode": "ymw-suguni-001",
+    "word": "直ぐに",
+    "reading-kana": "すぐに",
+    "reading-romaji": "suguni",
+    "type": [
+      "adverb"
+    ],
+    "meaning": "right away",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-sakkikara-001",
+    "word": "さっきから",
+    "reading-kana": "さっきから",
+    "reading-romaji": "sakkikara",
+    "type": [
+      "expression"
+    ],
+    "meaning": "since some time ago",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-ppoi-001",
+    "word": "っぽい",
+    "reading-kana": "っぽい",
+    "reading-romaji": "ppoi",
+    "type": [
+      "i-adjective",
+      "suffix"
+    ],
+    "meaning": "-ish",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-gimi-001",
+    "word": "気味",
+    "reading-kana": "ぎみ",
+    "reading-romaji": "gimi",
+    "type": "[\"noun\", \"suffix]",
+    "meaning": "-like",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-sei-001",
+    "word": "製",
+    "reading-kana": "せい",
+    "reading-romaji": "sei",
+    "type": "[\"noun\", \"suffix]",
+    "meaning": "-made",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  },
+  {
+    "refcode": "ymw-sa-001",
+    "word": "さ",
+    "reading-kana": "さ",
+    "reading-romaji": "sa",
+    "type": [
+      "suffix",
+      "particle",
+      "interjection"
+    ],
+    "meaning": "-ness",
+    "alternate-readings": "N/A",
+    "nuance-notes": "N/A",
+    "other-notes": "N/A"
+  }
+]
