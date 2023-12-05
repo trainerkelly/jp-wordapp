@@ -1,8 +1,8 @@
-# jp-wordapp-v1.0.0
+# jp-wordapp
 An app for benkyouing the nihongoz, specifically vocabulary.
 
 # About 
-Version 1.0.0 of my word app for studying Japanese vocabulary in a fun, quick, and efficent way. 
+Version 1.1.1 of my word app for studying Japanese vocabulary in a fun, quick, and efficent way. 
 
 The concept is based on RealKana by HooLogic. 
 
@@ -16,8 +16,6 @@ You will need a live server to fully view the app. The word lists are JSON files
 Written with HTML, CSS, and plain JavaScript.
 
 # Other Notes
-The JSON files provided in this version are only the test files, not the full ones. They're sufficient for functionality. 
-
 Feel free to build your own version of the app. I know one of the most annoying things for me over the past 1.5 years was trying to find similar apps I could use as code reference and couldn't (particularly with the double-answer-randomization). Credit is appreciated. If you use my app as a basis for yours, including the HTML and CSS, please remove my branding and stuff lol – I hope that's obvious.
 
 # Backstory 
