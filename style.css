@@ -306,7 +306,7 @@ footer a:visited {
 
 /* display none */
 .hide {
-    display: none;
+    display: none !important;
 }
 
 .show-block {
@@ -627,6 +627,11 @@ label > .en-meaning {
         border: 1px solid #222;
         font-size: .75rem;
         width: 400px;
+    }
+
+    .long-message-line {
+        width: 100%; 
+        
     }
 
     #answer {

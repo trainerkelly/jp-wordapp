@@ -73,12 +73,23 @@
 
             <p>While you can only type in English letters for the English meanings, you can type in either romaji or kana for the readings!</p>
 
-            <p class="red-text">At this time, there a slight glitch with using kana to answer. The test will check your answer before you're actually done typing – but don't worry. Keep going! If you are correct, it will eventually let you move on.</p>
+            <p class="red-text">At this time, there a glitch with using kana to answer. The test will check your answer before you're actually done typing – but don't worry. Keep going! If you are correct, it will eventually let you move on. If it doesn't let you move on, try typing in romaji.</p>
 
             <h3>Supplement, Not Replacement</h3>
             <p>This app isn't meant to replace your other learning methods – it's to act as a supplement or a compliment to them!</p>
             <p>Some words inside of the list(s) may be considered rude or are non-standard words. Make sure to do some additional research before you use them!</p>
             <p>Use with other resources for a full learning experience.</p>
+
+            <h3>Updates</h3>
+            <p><span class="bold">1.1.1</span> – full lists loaded, uploaded this to website, bug fixes, general improvements.</p>
+            <ul>
+                <li><span class="italics">Bug Fixed:</span> readings of words validating on length, not answer –</li>
+                <li><span class="italics">Bug Fixed:</span> full list for Yomiwa takes 6+ minutes to load – now it loads in a matter of seconds (Genki probably would have had the same problem, but I fixed it before the list was done.)</li>
+            </ul>
+
+            <p>かな validation is still an issue. I have concluded that it is currently a lack of skill &amp; knowledge. I will fix it in time.</p>
+
+            <p><span class="bold">1.0.0</span> – initial app uploaded with test files to GitHub.</p>
 
             <aside>
                 <h3>Noticed Issues?</h3>
@@ -97,7 +108,7 @@
                 <p>Feel free to also check out <a href="https://github.com/trainerkelly" target="_blank">My GitHub Profile</a> and my <a href="http://www.kellymulry.com" target="_blank">Portfolio Site.</a></p>
             </aside>
 
-            <p class="small"><span class="bold">App Version:</span> 1.0.0</p>
+            <p class="small"><span class="bold">App Version:</span> 1.1.1</p>
         </section>
 
         <button id="settings-btn" class="section-links mobile-nav" onclick="openSection(event, 'settings-tab')">Word List &amp; Settings</button>
@@ -118,14 +129,14 @@
                                 <p>Select a list to study.</p>
                                 
                                 <label for="tk-list-1" class="label"> 
-                                    <input type="radio" id="tk-list-1" name="wordlist" value="TrainerKelly's Custom List 1" data-url="tklist1-test.json">
+                                    <input type="radio" id="tk-list-1" name="wordlist" value="TrainerKelly's Custom List 1" data-url="tklist1.json">
                                     <span class="radio"></span>
                                     TrainerKelly's Custom List 1
                                 </label>
 
                                 
                                 <label for="genki" class="label">
-                                    <input type="radio" id="genki" name="wordlist" value="Genki" data-url="genki-test.json">
+                                    <input type="radio" id="genki" name="wordlist" value="Genki" data-url="genki.json">
                                     <span class="radio"></span>
                                     Genki Textbook
                                 </label>
@@ -436,78 +447,78 @@
                     Transitive Verbs</label> <br>
 
                     <label for="filter-intransitive-verbs" class="label">
-                    <span class="radio"></span>
                     <input type="radio" id="filter-intransitive-verbs" name="filterbywordtype" value="intransitive">
+                    <span class="radio"></span>
                     Intransitive Verbs</label> <br>
 
                     <label for="filter-auxiliary-verbs" class="label">
-                    <span class="radio"></span>
                     <input type="radio" id="filter-auxiliary-verbs" name="filterbywordtype" value="auxiliary verb">
+                    <span class="radio"></span>
                     Auxiliary Verbs</label> <br>
 
                     <label for="filter-adjectives" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-adjectives" name="filterbywordtype" value="adjective">
+                    <span class="radio"></span>
                     Adjectives</label> <br>
                     
                     <label for="filter-i-adjectives" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-i-adjectives" name="filterbywordtype" value="i-adjective">
+                    <span class="radio"></span>
                     い-adjectives</label> <br>
 
                     <label for="filter-na-adjectives" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-na-adjectives" name="filterbywordtype" value="na-adjective">
+                    <span class="radio"></span>
                     な-adjectives</label> <br>
 
                     <label for="filter-auxiliary-adjectives" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-auxiliary-adjectives" name="filterbywordtype" value="auxiliary adjective">
+                    <span class="radio"></span>
                     Auxiliary Adjectives</label> <br>
 
                     <label for="filter-adverbs" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-adverbs" name="filterbywordtype" value="adverb">
+                    <span class="radio"></span>
                     Adverbs</label> <br>
 
                     <label for="filter-conjunctions" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-conjunctions" name="filterbywordtype" value="conjunction">
+                    <span class="radio"></span>
                     Conjunctions</label> <br>
 
                     <label for="filter-expressions" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-expressions" name="filterbywordtype" value="expression">
+                    <span class="radio"></span>
                     Expressions</label> <br>
                     
                     <label for="filter-interjections" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-interjections" name="filterbywordtype" value="interjection">
+                    <span class="radio"></span>
                     Interjection</label> <br>
 
                     <label for="filter-copulas" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-copulas" name="filterbywordtype" value="copula">
+                    <span class="radio"></span>
                     Copulas</label> <br>
 
                     <label for="filter-particles" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-particles" name="filterbywordtype" value="particle">
+                    <span class="radio"></span>
                     Particles</label> <br>
 
                     <label for="filter-counters" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-counters" name="filterbywordtype" value="counter">
+                    <span class="radio"></span>
                     Counters</label> <br>
 
                     <label for="filter-prefixes" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-prefixes" name="filterbywordtype" value="prefix">
+                    <span class="radio"></span>
                     Prefixes</label> <br>
 
                     <label for="filter-suffixes" class="label">
-                        <span class="radio"></span>
                     <input type="radio" id="filter-suffixes" name="filterbywordtype" value="suffix">
+                    <span class="radio"></span>
                     Suffixes</label> <br>
                 </form>
 
@@ -645,23 +656,8 @@
                         Suffixes</label> <br>
                     </form>
 
-                    <!-- <div id="select-by-kana">
-                        <h3>Select by かな</h3>
-                        <button id="select-a-btn" class="kana-btn">あ</button> 
-                        <button id="select-ka-btn" class="kana-btn">か</button> 
-                        <button id="select-sa-btn" class="kana-btn">さ</button> 
-                        <button id="select-ta-btn" class="kana-btn">た</button>
-                        <button id="select-na-btn" class="kana-btn">な</button> 
-                        <button id="select-ha-btn" class="kana-btn">は</button> 
-                        <button id="select-ma-btn" class="kana-btn">ま</button> 
-                        <button id="select-ya-btn" class="kana-btn">や</button> 
-                        <button id="select-ra-btn" class="kana-btn">ら</button> 
-                        <button id="select-wa-btn" class="kana-btn">わ</button> 
-                        <button id="select-n-btn" class="kana-btn">ん</button>
-                    </div> --> 
-
-                    <br>
-
+                    <br> 
+                    
                     <input type="reset" value="Clear All" id="wordselection-reset" class="button">
                 </aside>
                 <div id="word-selection-grid" class="scroll">
@@ -678,7 +674,7 @@
             <p>Type the answer into the textbox below.</p>
             <p>Look at the label to know if you need to type the Japanese reading (kana or romaji) or English meaning. If the word is already in kana, answer it with the same kana, otherwise use romaji.</p>
             <p>Answers automatically validate. (Otherwise, press enter!)</p>
-            <p class="message-line-warning">There is currently a validation glitch when using kana (checks your answer before you finish typing). Continue answering – it will validate correctly if you are, in fact, correct!</p>
+            <p class="message-line-warning long-message-line">There are currently a few glitches when using かな (kana) that are currently in the process of being fixed: 1.) when typing in kana, answers validate before you're done typing and come out wrong – keep typing anyway; 2.) sometimes the word stops validating altogether in kana when doing the readings. In this case, just switch over to romaji to keep moving forward.</p>
             <p id="select-five-message" class="message-line-warning"></p>
             <div id="typing-quiz">
                 <label for="extra-info" class="label">
@@ -741,6 +737,7 @@
             <p><a href="https://www.icloud.com/notes" target="_blank">Notes</a> – compiling multiple word lists together</p>
             <p><a href="https://www.google.com/sheets/about/" target="_blank">Google Sheets</a> – spreadsheet creation, CSV creation</p>
             <p><a href="https://csvjson.com/" target="_blank">Flatfile: csvjson</a> – converting CSV into JSON (a format containing a collection of data – in this case, the actual word list)</p>
+            <p><a href="https://openai.com/blog/chatgpt" target="_blank">ChatGPT</a> – used on the Genki word list to quickly add the word type(s) (it had mistakes, but it made it faster to correct them), format word types into an array faster than I could, fix a syntax error I couldn't figure out on my own</p>
 
             <h4>Web Development</h4>
             <p><span class="bold">Languages Used:</span> HTML, CSS, JavaScript</p>
@@ -773,7 +770,7 @@
             </ul>
 
             <h3>Github</h3>
-            <p>You can view this project on <a href="" target="_blank">on GitHub</a>. <span class="warning">Full JSON files NOT included. Only the short versions.</span></p>
+            <p>You can view this project on <a href="https://github.com/trainerkelly/jp-wordapp" target="_blank">on GitHub</a>.</p>
 
             <h3>Links of Interest</h3>
             <p>None of these links are affiliate links. I'm just linking because I like these sites!</p>

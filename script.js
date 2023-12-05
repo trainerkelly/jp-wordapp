@@ -29,7 +29,7 @@
             const selectFiveMessage = document.getElementById('select-five-message');
             const typingQuizArea = document.getElementById('typing-quiz');
             const fiveWordsMessage = document.getElementById('five-words-message');
-
+       
             // learning category
             const categoryVocabulary =  document.getElementById('category-vocabulary');
             const categoryKanjiRadicals=  document.getElementById('category-kanji-radicals');
@@ -186,6 +186,7 @@
 
             // word lists 
             let wordList;
+            let testArray = [];
             let quizList = [];
 
             // current words & info
@@ -254,32 +255,65 @@
                         let i;
                         const NUMBER_OF_WORDS = jsonData.length;
                         wordList = jsonData;
-                        for(i = 0; i < wordList.length; i++) {
-                        // console.log("This word is " + wordList[i].word);
-                        wordSelection.innerHTML += 
+                //         for(i = 0; i < wordList.length; i++) {
+                //         console.log("This word is " + wordList[i].word);
+                //         wordSelection.innerHTML += 
                         
-                        `
-                        <label id="card-${wordList[i].refcode}" for="${wordList[i].refcode}" class="mini-card label"> 
-                            <input type="checkbox" id="${wordList[i].refcode}" name="selectWord" value="${wordList[i].word}" class="checkbox-styling" data-indexvalue="${i}">
-                            <span class="checkmark"></span>
-                            <span class="jp-word">${wordList[i].word}</span>
-                            <span class="jp-reading">${wordList[i]['reading-kana']}</span>
-                            <span class="en-meaning">${wordList[i].meaning}</span>
-                        </label>  
-                        `;
-                        wordListMessage.innerHTML = 
+                //         `
+                //         <label id="card-${wordList[i].refcode}" for="${wordList[i].refcode}" class="mini-card label"> 
+                //             <input type="checkbox" id="${wordList[i].refcode}" name="selectWord" value="${wordList[i].word}" class="checkbox-styling" data-indexvalue="${i}">
+                //             <span class="checkmark"></span>
+                //             <span class="jp-word">${wordList[i].word}</span>
+                //             <span class="jp-reading">${wordList[i]['reading-kana']}</span>
+                //             <span class="en-meaning">${wordList[i].meaning}</span>
+                //         </label>  
+                //         `;
+                //         wordListMessage.innerHTML = 
+                //         `<p class="message-line">The wordlist, <span class="selected-list-confirmation">${listName}</span>, has been successfully selected!</p>
+                //         <p class="message-line">The number of words in this list is <span class="selected-list-confirmation">${i + 1}.</span></p>
+                //         `;
+                // };
+                    wordListMessage.innerHTML = 
                         `<p class="message-line">The wordlist, <span class="selected-list-confirmation">${listName}</span>, has been successfully selected!</p>
-                        <p class="message-line">The number of words in this list is <span class="selected-list-confirmation">${i + 1}.</span></p>
+                        <p class="message-line">The number of words in this list is <span class="selected-list-confirmation">${wordList.length}.</span></p>
                         `;
-                };
+                        
+                    loadSelectWordCards();
                     wordListOptionsReset();
                     })
                     .catch(error => console.error("Oh no! The JSON file didn't load...sad face. =< Try again!", error));
             }
 
+            function loadSelectWordCards() {
+                wordSelection.innerHTML = "";
+                // console.log("Load Select Word Cards!");
+                wordSelectionCardsArray();
+                // console.log("Words are loaded!");
+                wordSelection.innerHTML = testArray.join("");
+                // wordSelectionMiniCards;
+                
+            }
+
+            function wordSelectionCardsArray() {
+                testArray = [];
+                for(i = 0; i < wordList.length; i++) {
+                    // console.log("This word is " + wordList[i].word);
+                    testArray.push( 
+                    `
+                    <label id="card-${wordList[i].refcode}" for="${wordList[i].refcode}" class="mini-card label"> 
+                        <input type="checkbox" id="${wordList[i].refcode}" name="selectWord" value="${wordList[i].word}" class="checkbox-styling" data-indexvalue="${i}">
+                        <span class="checkmark"></span>
+                        <span class="jp-word">${wordList[i].word}</span>
+                        <span class="jp-reading">${wordList[i]['reading-kana']}</span>
+                        <span class="en-meaning">${wordList[i].meaning}</span>
+                    </label>  
+                    `);
+                };
+                
+            }
 
             // resets everything on the Wordlist & Settings Page
-            function resetSettings() {
+            function resetSettings()  {
                 wordlistOptions.reset();
                 fontSelection.reset();
                 fontSelectAll.checked = false;
@@ -303,7 +337,7 @@
             // get specific wordlists 
             function loadJSONData() {
                 if (tkList1.checked === true) {
-                    fetchAPI("tklist1-test.json");
+                    fetchAPI("tklist1.json");
                     // console.log("tkList1 was selected!");
                     listName = tkList1.value; 
                     wordSelection.innerHTML = ""
@@ -311,7 +345,7 @@
                 };
 
                 if (genki.checked === true) {
-                    fetchAPI("genki-test.json");
+                    fetchAPI("genki.json");
                     // console.log("Genki was selected!");
                     wordSelection.innerHTML = ""
                     listName = genki.value; 
@@ -597,34 +631,76 @@
                         answerFeedback.innerHTML = answerWrong;
                         break;
 
-                    case currentAnswer[0] === currentReadingRomaji && currentAnswer[1] === currentReadingKana && answerInput.length === currentAnswer[0].length || answerInput.length === currentAnswer[1].length && answerInput === currentAnswer[0] || answerInput === currentAnswer[1] && previousRefcode !== currentRefcode: 
+                    case currentAnswer[0] === currentReadingRomaji && answerInput.length === currentAnswer[0].length && answerInput === currentAnswer[0] && previousRefcode !== currentRefcode:
                         previousReadingRomaji = currentReadingRomaji;
                         previousReadingKana = currentReadingKana; 
                         currentWordReadingRefcode = currentRefcode; 
                         // console.log("Great job! You answered the reading correctly!");
                         answerFeedback.innerHTML = answerRight;
                         selectCurrentAnswer();
-                        break;   
+                        break; 
 
-                    case currentAnswer[0] === currentReadingRomaji && currentAnswer[1] === currentReadingKana &&  answerInput !== currentAnswer[0] || answerInput !== currentAnswer[1]: 
-                        // console.log("Aww...you got the reading wrong. Try again!");
+                    case currentAnswer[1] === currentReadingKana && answerInput.length === currentAnswer[1].length && answerInput === currentAnswer[1] && previousRefcode !== currentRefcode:
+                        previousReadingRomaji = currentReadingRomaji;
+                        previousReadingKana = currentReadingKana; 
+                        currentWordReadingRefcode = currentRefcode; 
+                        // console.log("Great job! You answered the reading correctly!");
+                        answerFeedback.innerHTML = answerRight;
+                        selectCurrentAnswer();
+                        break; 
+    
+                    case currentAnswer[0] === currentReadingRomaji && answerInput !== currentAnswer[0]:
+                        // console.log("Aww...you got the meaning wrong. Try again!");
                         answerFeedback.innerHTML = answerWrong;
                         break;
+
+                    case currentAnswer[1] === currentReadingRomaji && answerInput !== currentAnswer[1]:
+                        // console.log("Aww...you got the meaning wrong. Try again!");
+                        answerFeedback.innerHTML = answerWrong;
+                        break;
+
+                    case previousSelectedWords.length < 1: 
+                        selectCurrentAnswer();
+                        break; 
 
                 } 
             }
 
             // checks if only readings are selected
             if (learningFocusBoth.checked === false && learningFocusMeanings.checked === false && learningFocusReadings.checked === true) {
-                    if (currentAnswer[0] === currentReadingRomaji && currentAnswer[1] === currentReadingKana && answerInput.length === currentAnswer[0].length || answerInput.length === currentAnswer[1].length && answerInput === currentAnswer[0] || answerInput === currentAnswer[1]) {
-                    previousReadingRomaji = currentReadingRomaji;
-                    previousReadingKana = currentReadingKana; 
-                    selectCurrentAnswer();
-                    // console.log("The reading is correct!");
-                    } else {
+                switch(true) {
+                    case currentAnswer[0] === currentReadingRomaji && answerInput.length === currentAnswer[0].length && answerInput === currentAnswer[0] && previousRefcode !== currentRefcode:
+                        previousReadingRomaji = currentReadingRomaji;
+                        previousReadingKana = currentReadingKana; 
+                        currentWordReadingRefcode = currentRefcode; 
+                        // console.log("Great job! You answered the reading correctly!");
+                        answerFeedback.innerHTML = answerRight;
+                        selectCurrentAnswer();
+                        break; 
+
+                    case currentAnswer[1] === currentReadingKana && answerInput.length === currentAnswer[1].length && answerInput === currentAnswer[1] && previousRefcode !== currentRefcode:
+                        previousReadingRomaji = currentReadingRomaji;
+                        previousReadingKana = currentReadingKana; 
+                        currentWordReadingRefcode = currentRefcode; 
+                        // console.log("Great job! You answered the reading correctly!");
+                        answerFeedback.innerHTML = answerRight;
+                        selectCurrentAnswer();
+                        break; 
+    
+                    case currentAnswer[0] === currentReadingRomaji && answerInput !== currentAnswer[0]:
+                        // console.log("Aww...you got the meaning wrong. Try again!");
                         answerFeedback.innerHTML = answerWrong;
-                        // console.log("Reading's wrong! Try again!");
-                    }
+                        break;
+
+                    case currentAnswer[1] === currentReadingRomaji && answerInput !== currentAnswer[1]:
+                        // console.log("Aww...you got the meaning wrong. Try again!");
+                        answerFeedback.innerHTML = answerWrong;
+                        break;
+
+                        case previousSelectedWords.length < 1: 
+                        selectCurrentAnswer();
+                        break; 
+                }
                 }
 
                 // checks if only meanings are selected; 
@@ -643,7 +719,7 @@
 
             // checks if the input is the same length or not – will automatically validate the input 
             function answerLength() {
-                if (answerField.value.length === currentAnswer.length && currentAnswer === currentMeaning || answerField.value.length === currentAnswer[0].length && currentAnswer[0] === currentReadingRomaji || answerField.value.length === currentAnswer[1].length && currentAnswer[1] === currentReadingKana && answerField.value >= "\u3040" && answer.value <= "\u309f" || answerField.value >= "\u30a0" && answer.value <= "\u30ff") {
+                if (answerField.value.length === currentAnswer.length && currentAnswer === currentMeaning || answerField.value.length === currentAnswer[0].length && currentAnswer[0] === currentReadingRomaji || answerField.value.length === currentAnswer[1].length && currentAnswer[1] === currentReadingKana &&  answerField.value >= "\u3040" && answerField.value <= "\u309f" || answerField.value >= "\u30a0" && answerField.value <= "\u30ff") {
                     checkAnswer();
                 }
             }
@@ -714,11 +790,19 @@
             // console.log(e.currentTarget.value)
             for (let i = 0; i < wordList.length; i++) {
                 let miniCard = document.getElementById(`card-${wordList[i].refcode}`);
+                // console.log("Current mini card reference code is" + wordList[i].refcode);
+                // console.log(miniCard);
                 if (wordList[i].type.includes(e.currentTarget.value)) {
                     miniCard.classList.remove('hide');
+                    // console.log("Mini card" + wordList[i].word + "is no longer hidden!")
                 } else {
                         miniCard.classList.add('hide')
+                        // console.log("Mini card" + wordList[i].word + "is hidden!")
                         } 
+            }
+
+            if (selectAll.checked === true) {
+                selectAllWords();
             }
 
             // console.log('The current target value is ' + e.currentTarget.value);
@@ -731,14 +815,22 @@
                     let miniCard = document.getElementById(`card-${wordList[i].refcode}`);
                     miniCard.classList.remove('hide');
                 }
+
+                if (selectAll.checked === true) {
+                    selectAllWords();
+                }
                 }
 
             // select all checkboxes for words
             function selectAllWords() {
                 // console.log("Select All has been checked!")
                 for (let i = 0; i < wordSelection.length; i++) {
+                    let miniCard = document.getElementById(`card-${wordList[i].refcode}`);
                     if (selectAll.checked === true) {
                         wordSelection[i].checked = true;
+                        if (miniCard.classList.contains('hide')) {
+                            wordSelection[i].checked = false;
+                        }
                     } else if (selectAll.checked === false) {
                         wordSelection[i].checked = false;
                         selectWordType();
@@ -793,6 +885,9 @@
             // load wordlists
             tkList1.addEventListener('click', loadJSONData);
             genki.addEventListener('click', loadJSONData);
+
+            // Load the mini selection cards 
+            // wordSelectionBtn.addEventListener('click', loadSelectWordCards);
 
             // show/hide random answer toggle 
             learningFocusBoth.addEventListener('click', displayRandomizeAnswersOption);
@@ -899,6 +994,7 @@
 
             // answer validation 
             answerField.addEventListener('input', answerLength);
+
        
             // prevent default behaviors. may also have addition functions as well 
             document.getElementById('check').addEventListener("click", function(event){
